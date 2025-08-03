@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>مشاوره تغذیه آنلاین - دکتر بهروز رسایی</title>
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --card: #ffffff;
+      --radius: 14px;
+      --shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+      --accent: #5c6ac4;
+      --text: #1f2d3a;
+      --muted: #6e7d91;
+      font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1100px !important;
+      margin: 0 auto;
+      padding: 1rem 1rem 4rem;
+    }
+
+    header {
+      padding: 1rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.25rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #f0f4fc 0%, #ffffff 60%);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #ffe8b5;
+      color: #6a4f1d;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    p.lead {
+      margin: 0.75rem 0 1.5rem;
+      color: var(--muted);
+    }
+
+    .currency-switcher {
+      margin-top: 1rem;
+      display: inline-flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .currency-switcher button {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      background: #fff;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .currency-switcher button.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .cards {
+      display: grid;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    @media(min-width:850px) {
+      .hero {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.5rem;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+
+    .price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 4px 0 8px;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 12px;
+      flex-grow: 1;
+    }
+
+    .features li {
+      font-size: 0.95rem;
+      margin-bottom: 7px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .feature-check {
+      color: var(--accent);
+      font-size: 1.1em;
+      margin-left: 4px;
+      display: inline-block;
+    }
+
+    .small {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .pill {
+      background: rgba(92, 106, 196, 0.1);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.6rem;
+      display: inline-block;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .cta {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .secondary {
+      background: #fff;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+    }
+
+    .section {
+      margin-top: 3rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    @media(min-width:900px) {
+      .grid-2 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .faq {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .followups {
+      background: #eef5ff;
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    .price-tag {
+      display: inline-block;
+      background: #f0f4fc;
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      margin-right: 4px;
+    }
+
+    footer {
+      margin-top: 4rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .badge-new {
+      background: #ffdaee;
+      color: #9d0f6a;
+    }
+
+    .shadow {
+      --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+      --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+
+    .p-6 {
+      padding: 1.5rem;
+    }
+
+    .bg-white {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+      border-radius: 16px;
+    }
+
+    .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .px-3 {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+
+    .bg-gray-100 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+    }
+
+    .rounded {
+      border-radius: 0.25rem;
+    }
+    .price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin: 4px 0 8px;
+      direction: rtl;
+    }
+    .price-row .old-price {
+      text-decoration: line-through;
+      color: #b0b0b0;
+      font-size: 1.1rem;
+      font-weight: 400;
+      order: 2;
+      margin-right: 0;
+      margin-left: 0;
+    }
+    .price-row .price {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent);
+      order: 1;
+      background: none;
+      box-shadow: none;
+      margin: 0;
+    }
+    @media (max-width: 600px) {
+      .price-row {
+        gap: 6px;
+      }
+      .price-row .price {
+        font-size: 1.4rem;
+      }
+      .price-row .old-price {
+        font-size: 1rem;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div style="font-size:1.5rem;">🍏</div>
+        <div>
+          مشاوره تغذیه آنلاین<br><strong>دکتر بهروز رسایی</strong>
+        </div>
+      </div>
+      <div>
+        <a href="#contact" class="btn-primary">رزرو جلسه</a>
+      </div>
+    </header>
+
+    <section class="hero" aria-label="معرفی خدمات">
+      <div class="hero-content">
+        <div class="badge">ویژه مراجعین خارج از کشور</div>
+        <h1>دسترسی به مشاوره تخصصی تغذیه با تعرفه تعدیل شده</h1>
+        <p class="lead">
+          هدف گسترش دسترسی ایرانیان خارج از کشور به خدمات رسمی تغذیه است. مشاوره کامل شخصی‌سازی‌شده، پیگیری‌های حمایتی و
+          طراحی رژیم با توجه به وضعیت بالینی شما.
+        </p>
+        <div class="cta">
+          <a href="#pricing" class="btn-primary">دیدن تعرفه‌ها</a>
+          <a href="#how-it-works" class="btn-primary secondary">چگونه کار می‌کند</a>
+        </div>
+      </div>
+      <div aria-hidden="true">
+        <!-- Illustration placeholder -->
+        <svg width="100%" height="100%" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet"
+          style="max-height:260px;">
+          <rect width="400" height="300" rx="20" fill="rgba(92,106,196,0.08)" />
+          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="20"
+            fill="rgba(92,106,196,0.35)">مشاوره تخصصی تغذیه</text>
+        </svg>
+      </div>
+    </section>
+
+    <section id="pricing" class="section" aria-label="تعرفه‌ها">
+      <h2>سطوح مشاوره و تعرفه‌ها</h2>
+      <div class="cards">
+        <!-- Basic / مشاوره کوتاه -->
+        <div class="bg-white rounded-2xl shadow p-6">
+          <h3 class="text-xl font-semibold mb-2">مشاوره کوتاه</h3>
+          <div class="price-row">
+            <span class="old-price">$80</span>
+            <span class="price">$25</span>
+          </div>
+          <div class="small mb-2" style="font-weight:600; color:var(--muted); margin-bottom: 10px;"> مدت زمان: ۲۰ تا ۳۰ دقیقه</div>
+          <ul class="features mb-4">
+            <li><span class="feature-check">✔</span> پاسخ به سوالات جدید</li>
+            <li><span class="feature-check">✔</span> بررسی پیشرفت اولیه</li>
+            <li><span class="feature-check">✔</span> حمایت در مسیر درمان</li>
+          </ul>
+        </div>
+        <!-- Standard / مشاوره کامل -->
+        <div class="bg-white rounded-2xl shadow p-6 border-2 border-blue-500">
+          <h3 class="text-xl font-semibold mb-2">مشاوره کامل</h3>
+          <div class="price-row mb-2">
+            <span class="old-price" dir="ltr" style="display:inline-block; text-align:left;">$200 - $300</span>
+            <span class="price">$70 - $100</span>
+          </div>
+          <div class="small mb-2" style="color:var(--muted); margin-bottom:12px;">
+            مشاوره کامل (۴ جلسه): جلسه اول ۴۵ تا ۶۰ دقیقه + ۳ جلسه پیگیری ۱۵ تا ۲۰ دقیقه‌ای (مجموعا طی ۲ ماه)
+          </div>
+          <ul class="features mb-4">
+            <li><span class="feature-check">✔</span> بررسی کامل سابقه و شرایط تغذیه ای</li>
+            <li><span class="feature-check">✔</span> طراحی حداقل ۲ رژیم اختصاصی شخصی سازی شده</li>
+            <li><span class="feature-check">✔</span> پایش روند و اصلاح برنامه ها</li>
+          </ul>
+          <div class="small" style="color:var(--muted); margin-bottom:8px;">
+            مشاوره کامل بر اساس سطح پیچیدگی تغذیه ای و شرایط پزشکی مراجعه کننده در ۳ سطح انجام می‌شود. هزینه هر سطح متناسب با وضعیت بالینی و زمان مورد نیاز برای تحلیل و طراحی رژیم بوده و پس از ارزیابی‌های تکمیلی، در همان جلسه اول (مشاوره کوتاه) به اطلاع شما خواهد رسید.
+          </div>
+        </div>
+        <!-- Follow-up / جلسات پیگیری ویژه -->
+        <div class="bg-white rounded-2xl shadow p-6">
+          <h3 class="text-xl font-semibold mb-2">پیگیری ویژه</h3>
+          <div class="text-sm font-medium mb-2">هر جلسه:</div>
+          <div class="price-row">
+            <span class="old-price">$50</span>
+            <span class="price">$20</span>
+          </div>
+          <div class="small mb-2" style="color:var(--muted); margin-bottom:12px;">
+            پس از پایان جلسات <b>مشاوره کامل</b> در صورت نیاز به ادامه ارتباط و پایش وضعیت تغذیه‌ای، امکان بهره‌مندی از حداکثر ۲ جلسه اضافی در قالب جلسات پیگیری فراهم است. این جلسات کوتاه ۱۵ تا ۲۰ دقیقه‌ای با اهداف زیر طراحی شده‌اند:
+          </div>
+          <ul class="features mb-4">
+            <li><span class="feature-check">✔</span> بررسی پیشرفت و اصلاح برنامه غذایی</li>
+            <li><span class="feature-check">✔</span> پاسخ به پرسش‌های جدید بیمار</li>
+            <li><span class="feature-check">✔</span> ایجاد حمایت روانی - تغذیه‌ای در مسیر درمان</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section" aria-label="نحوه کار">
+      <h2>چگونه کار می‌کند</h2>
+      <div class="grid-2">
+        <div class="faq">
+          <h4>۱. ارزیابی اولیه</h4>
+          <p>در جلسه کوتاه، وضعیت شما بررسی می‌شود و سطح پیچیدگی تغذیه‌ای و شرایط پزشکی سنجیده می‌شود. هزینه نهایی
+            مشاوره کامل در همان جلسه تعیین می‌شود.</p>
+        </div>
+        <div class="faq">
+          <h4>۲. مشاوره کامل</h4>
+          <p>جلسه اول عمیق و طراحی رژیم اختصاصی به همراه پایش و اصلاحات اولیه در طی ۲ ماه با سه پیگیری انجام می‌شود.</p>
+        </div>
+        <div class="faq">
+          <h4>۳. پیگیری ویژه</h4>
+          <p>در صورت نیاز به ادامه، دو جلسه کوتاه برای بررسی پیشرفت و پشتیبانی در بازه‌ی ۲ ماه پس از پکیج اصلی ارائه
+            می‌شود.</p>
+        </div>
+        <div class="faq">
+          <h4>۴. تمدید بلندمدت</h4>
+          <p>اگر به حمایت طولانی‌تر نیاز دارید، بسته جدیدی متناسب با شرایط فعلی شما طراحی خواهد شد.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section followups" aria-label="ویژگی‌های اضافی">
+      <h2>ویژگی‌های پشتیبان</h2>
+      <p>حمایت روانی-تغذیه‌ای در مسیر درمان و اصلاحات انعطاف‌پذیر.</p>
+      <div class="grid-2">
+        <div>
+          <h4>پایش شخصی‌سازی‌شده</h4>
+          <p>بررسی مداوم پیشرفت و تطابق برنامه با تغییرات بالینی.</p>
+        </div>
+        <div>
+          <h4>سؤالات جدید</h4>
+          <p>پاسخ به سوالات به‌روز شما در دوره درمان بدون نیاز به بسته کامل جدید.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section" aria-label="تماس و رزرو">
+      <h2>رزرو و تماس</h2>
+      <p>برای شروع، یک جلسه کوتاه رزرو کنید تا میزان نیاز شما ارزیابی شود و هزینه نهایی مشاوره کامل اعلام گردد.</p>
+      <div class="card" style="max-width:800px; margin:auto; display:flex; flex-direction:column; gap:16px;">
+        <form>
+          <div style="display:flex; flex-wrap:wrap; gap:12px;">
+            <div style="flex:1; min-width:150px;">
+              <label>نام کامل</label><br />
+              <input type="text" required style="width:100%; padding:10px; border-radius:8px; border:1px solid #d1d9e6;"
+                placeholder="مثلاً: علی محمدی">
+            </div>
+            <div style="flex:1; min-width:150px;">
+              <label>ایمیل</label><br />
+              <input type="email" required
+                style="width:100%; padding:10px; border-radius:8px; border:1px solid #d1d9e6;"
+                placeholder="you@example.com">
+            </div>
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:8px;">
+            <div style="flex:1; min-width:150px;">
+              <label>کشور اقامت</label><br />
+              <input type="text" required style="width:100%; padding:10px; border-radius:8px; border:1px solid #d1d9e6;"
+                placeholder="مثلاً: آلمان">
+            </div>
+            <div style="flex:1; min-width:150px;">
+              <label>پیام / توضیح کوتاه</label><br />
+              <textarea rows="2" style="width:100%; padding:10px; border-radius:8px; border:1px solid #d1d9e6;"
+                placeholder="توضیح مختصر درباره وضعیت فعلی"></textarea>
+            </div>
+          </div>
+          <div style="margin-top:12px;">
+            <button type="submit" class="btn-primary" style="width:100%;">درخواست جلسه کوتاه</button>
+          </div>
+        </form>
+      </div>
+      <p class="small" style="margin-top:8px;">پس از ثبت، تیم هماهنگی برای تعیین زمان و ارسال لینک جلسه با شما تماس
+        خواهد گرفت.</p>
+    </section>
+
+    <footer>
+      <p>© ۲۰۲۵ دکتر بهروز رسایی. تمام حقوق محفوظ است. | خدمات ویژه برای ایرانیان خارج از کشور.</p>
+    </footer>
+  </div>
+
+  <!-- No currency switcher needed, prices are now in USD only. -->
+</body>
+
+</html>
