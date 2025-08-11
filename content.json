@@ -37,10 +37,25 @@
             "oldPrice": "$200 - $300",
             "price": "$70 - $100",
             "duration": "مشاوره کامل (۴ جلسه): جلسه اول ۴۵ تا ۶۰ دقیقه + ۳ جلسه پیگیری ۱۵ تا ۲۰ دقیقه‌ای (مجموعا طی ۲ ماه)",
-            "features": [
-              "بررسی کامل سابقه و شرایط تغذیه ای",
-              "طراحی حداقل ۲ رژیم اختصاصی شخصی سازی شده",
-              "پایش روند و اصلاح برنامه ها"
+            "featureGroups": [
+              {
+                "title": "ارزیابی و بررسی",
+                "features": [
+                  "بررسی کامل سابقه و شرایط تغذیه ای"
+                ]
+              },
+              {
+                "title": "طراحی و تنظیم",
+                "features": [
+                  "طراحی حداقل ۲ رژیم اختصاصی شخصی سازی شده"
+                ]
+              },
+              {
+                "title": "پیگیری و حمایت",
+                "features": [
+                  "پایش روند و اصلاح برنامه ها"
+                ]
+              }
             ],
             "note": "مشاوره کامل بر اساس سطح پیچیدگی تغذیه ای و شرایط پزشکی مراجعه کننده در ۳ سطح انجام می‌شود. هزینه هر سطح متناسب با وضعیت بالینی و زمان مورد نیاز برای تحلیل و طراحی رژیم بوده و پس از ارزیابی‌های تکمیلی، در همان جلسه اول (مشاوره کوتاه) به اطلاع شما خواهد رسید.",
             "featured": true
@@ -152,10 +167,25 @@
             "oldPrice": "$200 - $300",
             "price": "$70 - $100",
             "duration": "4 sessions: First session 45–60 min + 3 follow-ups (15–20 min each) over 2 months",
-            "features": [
-              "In-depth review of your nutrition and health history",
-              "At least 2 personalized meal plans designed for you",
-              "Ongoing monitoring and plan adjustments"
+            "featureGroups": [
+              {
+                "title": "Assessment & Review",
+                "features": [
+                  "In-depth review of your nutrition and health history"
+                ]
+              },
+              {
+                "title": "Design & Planning",
+                "features": [
+                  "At least 2 personalized meal plans designed for you"
+                ]
+              },
+              {
+                "title": "Follow-up & Support",
+                "features": [
+                  "Ongoing monitoring and plan adjustments"
+                ]
+              }
             ],
             "note": "The full consultation is offered in 3 tiers based on your medical and nutritional needs. The exact fee is determined after your initial assessment (short consultation) and depends on the complexity and time required for your case.",
             "featured": true

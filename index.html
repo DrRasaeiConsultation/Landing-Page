@@ -302,6 +302,18 @@
     .featured-card {
       border: 2px solid #5c6ac4;
     }
+
+    .feature-group-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--accent);
+      margin-top: 12px;
+      margin-bottom: 6px;
+    }
+
+    .feature-group-title:first-child {
+      margin-top: 0;
+    }
     .price-row {
       display: flex;
       align-items: baseline;
@@ -556,9 +568,19 @@
         <ul class="features">
       `;
       
-      pkg.features.forEach(feature => {
-        html += `<li><span class="feature-check">✔</span> ${feature}</li>`;
-      });
+      // Handle both old features array and new featureGroups structure
+      if (pkg.featureGroups) {
+        pkg.featureGroups.forEach(group => {
+          html += `<div class="feature-group-title">${group.title}</div>`;
+          group.features.forEach(feature => {
+            html += `<li><span class="feature-check">✔</span> ${feature}</li>`;
+          });
+        });
+      } else if (pkg.features) {
+        pkg.features.forEach(feature => {
+          html += `<li><span class="feature-check">✔</span> ${feature}</li>`;
+        });
+      }
       
       html += '</ul>';
       
