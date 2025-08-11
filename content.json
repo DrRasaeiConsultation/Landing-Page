@@ -1,0 +1,234 @@
+{
+  "languages": {
+    "fa": {
+      "meta": {
+        "title": "مشاوره تغذیه آنلاین - دکتر بهروز رسایی",
+        "lang": "fa",
+        "dir": "rtl"
+      },
+      "header": {
+        "logo": "مشاوره تغذیه آنلاین<br><strong>دکتر بهروز رسایی</strong>",
+        "langToggle": "EN",
+        "bookButton": "رزرو جلسه"
+      },
+      "hero": {
+        "badge": "ویژه مراجعین خارج از کشور",
+        "title": "دسترسی به مشاوره تخصصی تغذیه با تعرفه تعدیل شده",
+        "description": "هدف گسترش دسترسی ایرانیان خارج از کشور به خدمات رسمی تغذیه است. مشاوره کامل شخصی‌سازی‌شده، پیگیری‌های حمایتی و طراحی رژیم با توجه به وضعیت بالینی شما.",
+        "seePricingButton": "دیدن تعرفه‌ها",
+        "howItWorksButton": "چگونه کار می‌کند",
+        "svgText": "مشاوره تخصصی تغذیه"
+      },
+      "pricing": {
+        "title": "سطوح مشاوره و تعرفه‌ها",
+        "packages": [
+          {
+            "title": "مشاوره کوتاه",
+            "oldPrice": "$80",
+            "price": "$25",
+            "duration": "مدت زمان: ۲۰ تا ۳۰ دقیقه",
+            "features": [
+              "پاسخ به سوالات جدید",
+              "بررسی پیشرفت اولیه",
+              "حمایت در مسیر درمان"
+            ]
+          },
+          {
+            "title": "مشاوره کامل",
+            "oldPrice": "$200 - $300",
+            "price": "$70 - $100",
+            "duration": "مشاوره کامل (۴ جلسه): جلسه اول ۴۵ تا ۶۰ دقیقه + ۳ جلسه پیگیری ۱۵ تا ۲۰ دقیقه‌ای (مجموعا طی ۲ ماه)",
+            "features": [
+              "بررسی کامل سابقه و شرایط تغذیه ای",
+              "طراحی حداقل ۲ رژیم اختصاصی شخصی سازی شده",
+              "پایش روند و اصلاح برنامه ها"
+            ],
+            "note": "مشاوره کامل بر اساس سطح پیچیدگی تغذیه ای و شرایط پزشکی مراجعه کننده در ۳ سطح انجام می‌شود. هزینه هر سطح متناسب با وضعیت بالینی و زمان مورد نیاز برای تحلیل و طراحی رژیم بوده و پس از ارزیابی‌های تکمیلی، در همان جلسه اول (مشاوره کوتاه) به اطلاع شما خواهد رسید.",
+            "featured": true
+          },
+          {
+            "title": "پیگیری ویژه",
+            "sessionText": "هر جلسه:",
+            "oldPrice": "$50",
+            "price": "$20",
+            "duration": "پس از پایان جلسات <b>مشاوره کامل</b> در صورت نیاز به ادامه ارتباط و پایش وضعیت تغذیه‌ای، امکان بهره‌مندی از حداکثر ۲ جلسه اضافی در قالب جلسات پیگیری فراهم است. این جلسات کوتاه ۱۵ تا ۲۰ دقیقه‌ای با اهداف زیر طراحی شده‌اند:",
+            "features": [
+              "بررسی پیشرفت و اصلاح برنامه غذایی",
+              "پاسخ به پرسش‌های جدید بیمار",
+              "ایجاد حمایت روانی - تغذیه‌ای در مسیر درمان"
+            ]
+          }
+        ]
+      },
+      "howItWorks": {
+        "title": "چگونه کار می‌کند",
+        "steps": [
+          {
+            "title": "۱. ارزیابی اولیه",
+            "description": "در جلسه کوتاه، وضعیت شما بررسی می‌شود و سطح پیچیدگی تغذیه‌ای و شرایط پزشکی سنجیده می‌شود. هزینه نهایی مشاوره کامل در همان جلسه تعیین می‌شود."
+          },
+          {
+            "title": "۲. مشاوره کامل",
+            "description": "جلسه اول عمیق و طراحی رژیم اختصاصی به همراه پایش و اصلاحات اولیه در طی ۲ ماه با سه پیگیری انجام می‌شود."
+          },
+          {
+            "title": "۳. پیگیری ویژه",
+            "description": "در صورت نیاز به ادامه، دو جلسه کوتاه برای بررسی پیشرفت و پشتیبانی در بازه‌ی ۲ ماه پس از پکیج اصلی ارائه می‌شود."
+          },
+          {
+            "title": "۴. تمدید بلندمدت",
+            "description": "اگر به حمایت طولانی‌تر نیاز دارید، بسته جدیدی متناسب با شرایط فعلی شما طراحی خواهد شد."
+          }
+        ]
+      },
+      "support": {
+        "title": "ویژگی‌های پشتیبان",
+        "description": "حمایت روانی-تغذیه‌ای در مسیر درمان و اصلاحات انعطاف‌پذیر.",
+        "features": [
+          {
+            "title": "پایش شخصی‌سازی‌شده",
+            "description": "بررسی مداوم پیشرفت و تطابق برنامه با تغییرات بالینی."
+          },
+          {
+            "title": "سؤالات جدید",
+            "description": "پاسخ به سوالات به‌روز شما در دوره درمان بدون نیاز به بسته کامل جدید."
+          }
+        ]
+      },
+      "contact": {
+        "title": "رزرو و تماس",
+        "description": "برای شروع، یک جلسه کوتاه رزرو کنید تا میزان نیاز شما ارزیابی شود و هزینه نهایی مشاوره کامل اعلام گردد.",
+        "form": {
+          "nameLabel": "نام کامل",
+          "namePlaceholder": "مثلاً: علی محمدی",
+          "emailLabel": "ایمیل",
+          "emailPlaceholder": "you@example.com",
+          "countryLabel": "کشور اقامت",
+          "countryPlaceholder": "مثلاً: آلمان",
+          "messageLabel": "پیام / توضیح کوتاه",
+          "messagePlaceholder": "توضیح مختصر درباره وضعیت فعلی",
+          "submitButton": "درخواست جلسه کوتاه"
+        },
+        "afterSubmit": "پس از ثبت، تیم هماهنگی برای تعیین زمان و ارسال لینک جلسه با شما تماس خواهد گرفت."
+      },
+      "footer": {
+        "text": "© ۲۰۲۵ دکتر بهروز رسایی. تمام حقوق محفوظ است. | خدمات ویژه برای ایرانیان خارج از کشور."
+      }
+    },
+    "en": {
+      "meta": {
+        "title": "Online Nutrition Consultation - Dr. Behrooz Rasaei",
+        "lang": "en",
+        "dir": "ltr"
+      },
+      "header": {
+        "logo": "Online Nutrition Consultation<br><strong>Dr. Behrooz Rasaei</strong>",
+        "langToggle": "FA",
+        "bookButton": "Book a Session"
+      },
+      "hero": {
+        "badge": "For Iranians Living Abroad",
+        "title": "Personalized Online Nutrition Consultations at Fair Rates",
+        "description": "Access professional nutrition advice, tailored meal plans, and ongoing support—wherever you are in the world. Get expert guidance for your health journey, designed for the needs of Iranians living abroad.",
+        "seePricingButton": "See Pricing",
+        "howItWorksButton": "How It Works",
+        "svgText": "Nutrition Consultation"
+      },
+      "pricing": {
+        "title": "Consultation Packages & Pricing",
+        "packages": [
+          {
+            "title": "Short Consultation",
+            "oldPrice": "$80",
+            "price": "$25",
+            "duration": "Duration: 20–30 minutes",
+            "features": [
+              "Get answers to new questions",
+              "Review your initial progress",
+              "Support as you start your journey"
+            ]
+          },
+          {
+            "title": "Full Consultation",
+            "oldPrice": "$200 - $300",
+            "price": "$70 - $100",
+            "duration": "4 sessions: First session 45–60 min + 3 follow-ups (15–20 min each) over 2 months",
+            "features": [
+              "In-depth review of your nutrition and health history",
+              "At least 2 personalized meal plans designed for you",
+              "Ongoing monitoring and plan adjustments"
+            ],
+            "note": "The full consultation is offered in 3 tiers based on your medical and nutritional needs. The exact fee is determined after your initial assessment (short consultation) and depends on the complexity and time required for your case.",
+            "featured": true
+          },
+          {
+            "title": "Special Follow-up",
+            "sessionText": "Per session:",
+            "oldPrice": "$50",
+            "price": "$20",
+            "duration": "After completing the full consultation, you can book up to 2 extra follow-up sessions for continued support. Each session is 15–20 minutes and designed to:",
+            "features": [
+              "Review your progress and update your plan",
+              "Get answers to new questions",
+              "Receive ongoing nutrition and emotional support"
+            ]
+          }
+        ]
+      },
+      "howItWorks": {
+        "title": "How It Works",
+        "steps": [
+          {
+            "title": "1. Initial Assessment",
+            "description": "Start with a short session to review your needs and health background. We'll determine the best plan and the exact fee for your full consultation."
+          },
+          {
+            "title": "2. Full Consultation",
+            "description": "Your first session is in-depth, with a personalized meal plan and three follow-ups over two months to monitor and adjust your program."
+          },
+          {
+            "title": "3. Special Follow-up",
+            "description": "If you need more support, you can book up to two extra short sessions within two months after your main package."
+          },
+          {
+            "title": "4. Long-term Support",
+            "description": "If you need ongoing care, we'll design a new package tailored to your current needs."
+          }
+        ]
+      },
+      "support": {
+        "title": "Extra Support Features",
+        "description": "Ongoing nutrition and emotional support, with flexible adjustments as your needs change.",
+        "features": [
+          {
+            "title": "Personalized Monitoring",
+            "description": "Continuous review of your progress and adapting your plan as your health evolves."
+          },
+          {
+            "title": "Ask New Questions",
+            "description": "Get answers to your latest questions during your program—no need to buy a new package."
+          }
+        ]
+      },
+      "contact": {
+        "title": "Book a Session",
+        "description": "Start with a short session to assess your needs and receive a personalized plan and quote for your full consultation.",
+        "form": {
+          "nameLabel": "Full Name",
+          "namePlaceholder": "e.g. Ali Mohammadi",
+          "emailLabel": "Email",
+          "emailPlaceholder": "you@example.com",
+          "countryLabel": "Country of Residence",
+          "countryPlaceholder": "e.g. Germany",
+          "messageLabel": "Message / Short Note",
+          "messagePlaceholder": "Briefly describe your current situation",
+          "submitButton": "Request Short Session"
+        },
+        "afterSubmit": "After submitting, our team will contact you to schedule your session and send you a meeting link."
+      },
+      "footer": {
+        "text": "© 2025 Dr. Behrooz Rasaei. All rights reserved. | Special services for Iranians living abroad."
+      }
+    }
+  }
+}
