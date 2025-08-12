@@ -30,7 +30,8 @@
               "ارزیابی سریع وضعیت تغذیه",
               "ارائه راهکارهای کاربردی و فوری",
               "پاسخ به پرسش های تغذیه ای شما"
-            ]
+            ],
+            "note": "این سرویس برای دریافت مشاوره سریع و راهنمایی فوری طراحی شده است. شامل تنظیم رژیم غذایی نمی‌شود و صرفاً جهت پاسخ به سوالات و ارائه توصیه‌های کلی تغذیه‌ای است.<br><br>مناسب برای افرادی که نیاز به پاسخ سریع سوالات خاص دارند یا می‌خواهند قبل از شروع مشاوره کامل، وضعیت کلی خود را ارزیابی کنند."
           },
           {
             "title": "مشاوره کامل",
@@ -70,7 +71,8 @@
               "بررسی پیشرفت و اصلاح برنامه غذایی",
               "پاسخ به پرسش‌های جدید بیمار",
               "ایجاد حمایت روانی - تغذیه‌ای در مسیر درمان"
-            ]
+            ],
+            "note": "این سرویس فقط پس از تکمیل مشاوره کامل قابل استفاده است و به عنوان پشتیبانی اضافی برای تداوم مسیر درمان طراحی شده است. حداکثر ۲ جلسه در بازه زمانی ۲ ماه پس از اتمام بسته اصلی ارائه می‌شود.<br><br>مناسب برای افرادی که نیاز به حمایت بیشتر در پیاده‌سازی تغییرات تغذیه‌ای دارند یا با چالش‌های جدید مواجه شده‌اند و به راهنمایی تخصصی نیاز دارند."
           }
         ]
       },
@@ -160,7 +162,8 @@
               "Get answers to new questions",
               "Review your initial progress",
               "Support as you start your journey"
-            ]
+            ],
+            "note": "This service is designed for quick consultation and immediate guidance. It does not include meal plan design and is solely for answering questions and providing general nutrition advice.<br><br>Perfect for those who need quick answers to specific questions or want to assess their overall situation before starting a full consultation program."
           },
           {
             "title": "Full Consultation",
@@ -200,7 +203,8 @@
               "Review your progress and update your plan",
               "Get answers to new questions",
               "Receive ongoing nutrition and emotional support"
-            ]
+            ],
+            "note": "This service is only available after completing the full consultation and is designed as additional support for continuing your treatment journey. Maximum of 2 sessions within 2 months after completing the main package.<br><br>Perfect for those who need extra support in implementing nutritional changes or have encountered new challenges and require professional guidance."
           }
         ]
       },
