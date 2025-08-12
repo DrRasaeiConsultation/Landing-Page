@@ -56,6 +56,13 @@
                 "features": [
                   "طی ۲ ماه، هر جلسه ۱۵ تا ۲۰ دقیقه، پیشرفت شما را می سنجیم و برنامه را اصالح میکنیم"
                 ]
+              },
+              {
+                "title": "پشتیبانی مستمر",
+                "features": [
+                  "دسترسی به راهنمایی و پاسخ سوالات در طول دوره درمان",
+                  "انعطاف‌پذیری در تنظیم مجدد برنامه بر اساس پیشرفت شما"
+                ]
               }
             ],
             "note": "این سرویس در سه سطح و بر اساس پیچیدگی شرایط پزشکی و تغذیهای شما ارائه می شود. پس از جلسه اول، هزینه دقیق تعیین میگردد تا مناسبترین و مؤثرترین دوره رژیمدرمانی ویژه شما طراحی شود",
@@ -143,68 +150,75 @@
         "bookButton": "Book a Session"
       },
       "hero": {
-        "badge": "For Iranians Living Abroad",
-        "title": "Personalized Online Nutrition Consultations at Fair Rates",
-        "description": "Access professional nutrition advice, tailored meal plans, and ongoing support—wherever you are in the world. Get expert guidance for your health journey, designed for the needs of Iranians living abroad.",
-        "seePricingButton": "See Pricing",
+        "badge": "For Iranians Living Abroad (Europe, America, Canada, Australia and other countries)",
+        "title": "Professional, Reliable and Expert Consultation",
+        "description": "Our goal is to provide you with easy access to modern nutrition services based on the latest scientific data. All diets are designed completely personalized according to your health conditions and clinical needs, and are accompanied by regular supportive follow-ups. Providing specialized services in the areas of eating disorders, modern nutrition approaches such as Intuitive Eating and Non-diet Approach.",
+        "seePricingButton": "View Services",
         "howItWorksButton": "How It Works",
         "svgText": "Nutrition Consultation"
       },
       "pricing": {
-        "title": "Consultation Packages & Pricing",
+        "title": "Choose the Type of Consultation That Suits Your Needs",
         "packages": [
           {
-            "title": "Short Consultation",
+            "title": "Short Consultation - Without Diet Plan Design",
             "oldPrice": "$80",
             "price": "$25",
             "duration": "Duration: 20–30 minutes",
             "features": [
-              "Get answers to new questions",
-              "Review your initial progress",
-              "Support as you start your journey"
+              "Quick nutrition status assessment",
+              "Providing practical and immediate solutions",
+              "Answering your nutrition questions"
             ],
-            "note": "This service is designed for quick consultation and immediate guidance. It does not include meal plan design and is solely for answering questions and providing general nutrition advice.<br><br>Perfect for those who need quick answers to specific questions or want to assess their overall situation before starting a full consultation program."
+            "note": "A 20 to 30-minute session for when you're not ready to start a diet therapy yet, but want to take the first step for your health today<br><br>This single-session consultation (without diet plan design) is also suitable for people who adhere to general healthy diets, generally have a healthy lifestyle, or just want to make sure their current path is correct<br><br>In this session, your nutritional status will be assessed, your questions will be answered, and immediate and practical solutions for improving nutrition and promoting health will be provided"
           },
           {
             "title": "Full Consultation",
             "oldPrice": "$200 - $300",
             "price": "$70 - $100",
-            "duration": "4 sessions: First session 45–60 min + 3 follow-ups (15–20 min each) over 2 months",
+            "duration": "Full consultation (4 sessions): First session 45 to 60 minutes + 3 follow-up sessions 15 to 20 minutes each (total over 2 months)",
             "featureGroups": [
               {
-                "title": "Assessment & Review",
+                "title": "First Session (45 to 60 minutes)",
                 "features": [
-                  "In-depth review of your nutrition and health history"
+                  "We completely review your nutrition and health conditions to find the best path"
                 ]
               },
               {
-                "title": "Design & Planning",
+                "title": "Personal Program Design",
                 "features": [
-                  "At least 2 personalized meal plans designed for you"
+                  "A completely customized diet and recommendations tailored to your goals and conditions will be designed"
                 ]
               },
               {
-                "title": "Follow-up & Support",
+                "title": "3 Online Follow-up Sessions",
                 "features": [
-                  "Ongoing monitoring and plan adjustments"
+                  "Over 2 months, each session 15 to 20 minutes, we assess your progress and modify the program"
+                ]
+              },
+              {
+                "title": "Continuous Support",
+                "features": [
+                  "Access to guidance and answering questions during the treatment period",
+                  "Flexibility in readjusting the program based on your progress"
                 ]
               }
             ],
-            "note": "The full consultation is offered in 3 tiers based on your medical and nutritional needs. The exact fee is determined after your initial assessment (short consultation) and depends on the complexity and time required for your case.",
+            "note": "This service is provided at three levels based on the complexity of your medical and nutritional conditions. After the first session, the exact cost will be determined so that the most suitable and effective diet therapy course specifically for you can be designed",
             "featured": true
           },
           {
-            "title": "Special Follow-up",
+            "title": "Follow-up Service (For Full Consultation Users)",
             "sessionText": "Per session:",
             "oldPrice": "$50",
             "price": "$20",
-            "duration": "After completing the full consultation, you can book up to 2 extra follow-up sessions for continued support. Each session is 15–20 minutes and designed to:",
+            "duration": "After completing the <b>Full Consultation</b> sessions, if you need to continue communication and monitoring of your nutritional status, you can benefit from up to 2 additional sessions in the form of follow-up sessions. These short 15 to 20-minute sessions are designed with the following goals:",
             "features": [
-              "Review your progress and update your plan",
-              "Get answers to new questions",
-              "Receive ongoing nutrition and emotional support"
+              "Review progress and modify the nutrition plan",
+              "Answer new patient questions",
+              "Continuous psychological and nutritional support during treatment"
             ],
-            "note": "This service is only available after completing the full consultation and is designed as additional support for continuing your treatment journey. Maximum of 2 sessions within 2 months after completing the main package.<br><br>Perfect for those who need extra support in implementing nutritional changes or have encountered new challenges and require professional guidance."
+           "note": "After completing the full consultation sessions, if you need to continue follow-up and monitoring of your nutritional status, you can use up to 2 additional follow-up sessions.<br><br>These short 15 to 20-minute sessions are designed to review progress, answer new questions and optimize the program"
           }
         ]
       },

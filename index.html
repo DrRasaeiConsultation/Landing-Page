@@ -399,12 +399,12 @@
       </div>
     </section>
 
-    <section id="how-it-works" class="section" aria-label="نحوه کار">
+    <!-- <section id="how-it-works" class="section" aria-label="نحوه کار">
       <h2 id="how-title">چگونه کار می‌کند</h2>
       <div class="grid-2" id="how-steps">
-        <!-- Content will be loaded dynamically from JSON -->
+        Content will be loaded dynamically from JSON
       </div>
-    </section>
+    </section> -->
 
     <section class="section followups" aria-label="ویژگی‌های اضافی">
       <h2 id="support-title">ویژگی‌های پشتیبان</h2>
@@ -477,6 +477,8 @@
   // Fallback function to show default content
   function showDefaultContent() {
     console.log('Using fallback content - please serve via web server to load JSON');
+    
+    // Set fallback pricing cards
     document.getElementById('pricing-cards').innerHTML = `
       <div class="card">
         <h3>مشاوره کوتاه</h3>
@@ -487,13 +489,51 @@
         <p class="small">Please serve this page via a web server to load content from JSON file</p>
       </div>
     `;
+    
+    // Set fallback support features
+    document.getElementById('support-title').textContent = 'ویژگی‌های پشتیبان';
+    document.getElementById('support-description').textContent = 'حمایت روانی-تغذیه‌ای در مسیر درمان و اصلاحات انعطاف‌پذیر.';
+    document.getElementById('support-features').innerHTML = `
+      <div class="faq">
+        <h4>پایش شخصی‌سازی‌شده</h4>
+        <p>بررسی مداوم پیشرفت و تطابق برنامه با تغییرات بالینی.</p>
+      </div>
+      <div class="faq">
+        <h4>سؤالات جدید</h4>
+        <p>پاسخ به سوالات به‌روز شما در دوره درمان بدون نیاز به بسته کامل جدید.</p>
+      </div>
+    `;
+    
+    // Set fallback contact section
+    document.getElementById('contact-title').textContent = 'رزرو و تماس';
+    document.getElementById('contact-description').textContent = 'برای شروع، یک جلسه کوتاه رزرو کنید تا میزان نیاز شما ارزیابی شود و هزینه نهایی مشاوره کامل اعلام گردد.';
+    
+    // Set fallback form labels
+    document.getElementById('name-label').textContent = 'نام کامل';
+    document.getElementById('email-label').textContent = 'ایمیل';
+    document.getElementById('country-label').textContent = 'کشور اقامت';
+    document.getElementById('message-label').textContent = 'پیام / توضیح کوتاه';
+    document.getElementById('submit-button').textContent = 'درخواست جلسه کوتاه';
+    document.getElementById('after-submit-text').textContent = 'پس از ثبت، تیم هماهنگی برای تعیین زمان و ارسال لینک جلسه با شما تماس خواهد گرفت.';
+    
+    // Set fallback footer
+    document.getElementById('footer-text').textContent = '© ۲۰۲۵ دکتر بهروز رسایی. تمام حقوق محفوظ است. | خدمات ویژه برای ایرانیان خارج از کشور.';
   }
 
   // Update all page content based on current language
   function updateContent() {
-    if (!content) return;
+    if (!content) {
+      console.error('Content is null or undefined');
+      return;
+    }
     
+    console.log('Updating content for language:', currentLang);
     const lang = content.languages[currentLang];
+    
+    if (!lang) {
+      console.error('Language not found:', currentLang);
+      return;
+    }
     
     // Update document meta
     document.title = lang.meta.title;
@@ -517,14 +557,18 @@
     document.getElementById('pricing-title').textContent = lang.pricing.title;
     updatePricingCards(lang.pricing.packages);
     
-    // Update how it works section
-    document.getElementById('how-title').textContent = lang.howItWorks.title;
-    updateHowItWorksSteps(lang.howItWorks.steps);
+    // Update how it works section (commented out)
+    // document.getElementById('how-title').textContent = lang.howItWorks.title;
+    // updateHowItWorksSteps(lang.howItWorks.steps);
     
     // Update support section
-    document.getElementById('support-title').textContent = lang.support.title;
-    document.getElementById('support-description').textContent = lang.support.description;
-    updateSupportFeatures(lang.support.features);
+    if (lang.support) {
+      document.getElementById('support-title').textContent = lang.support.title;
+      document.getElementById('support-description').textContent = lang.support.description;
+      updateSupportFeatures(lang.support.features);
+    } else {
+      console.error('Support section missing from content');
+    }
     
     // Update contact section
     document.getElementById('contact-title').textContent = lang.contact.title;
@@ -595,7 +639,7 @@
     console.log('All cards updated, container children:', container.children.length);
   }
 
-  function updateHowItWorksSteps(steps) {
+  /* function updateHowItWorksSteps(steps) {
     const container = document.getElementById('how-steps');
     container.innerHTML = '';
     
@@ -608,20 +652,32 @@
       `;
       container.appendChild(stepDiv);
     });
-  }
+  } */
 
   function updateSupportFeatures(features) {
+    console.log('Updating support features:', features);
     const container = document.getElementById('support-features');
+    if (!container) {
+      console.error('support-features container not found');
+      return;
+    }
     container.innerHTML = '';
+    
+    if (!features || !Array.isArray(features)) {
+      console.error('Features is not an array:', features);
+      return;
+    }
     
     features.forEach(feature => {
       const featureDiv = document.createElement('div');
+      featureDiv.className = 'faq';
       featureDiv.innerHTML = `
         <h4>${feature.title}</h4>
         <p>${feature.description}</p>
       `;
       container.appendChild(featureDiv);
     });
+    console.log('Support features updated successfully');
   }
 
   function updateContactForm(form) {
@@ -665,10 +721,12 @@
 
   // Initialize the page
   document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, starting page initialization');
     loadContent();
     
     // Add event listener for language toggle
     document.getElementById('lang-toggle').addEventListener('click', toggleLanguage);
+    console.log('Event listeners added');
   });
 </script>
 
